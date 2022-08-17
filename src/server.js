@@ -18,7 +18,7 @@ async function handler(request, response) {
 
     if (method === 'POST') {
         const body = JSON.parse(await once(request, 'data'))
-        console.log('recebido', body)
+        
         const id = randomUUID()
         Database.set(id, body)
 
